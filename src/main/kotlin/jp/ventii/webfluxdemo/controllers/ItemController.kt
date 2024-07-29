@@ -2,7 +2,6 @@ package jp.ventii.webfluxdemo.controllers
 
 import jp.ventii.webfluxdemo.models.Item
 import jp.ventii.webfluxdemo.services.ItemService
-import jp.ventii.webfluxdemo.services.WebClientService
 import org.springframework.web.bind.annotation.*
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
@@ -11,7 +10,6 @@ import reactor.core.publisher.Mono
 @RestController
 @RequestMapping("/api/items")
 class WebClientController(
-    private val webClientService: WebClientService,
     private val itemService: ItemService
 ) {
 
