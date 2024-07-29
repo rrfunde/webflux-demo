@@ -1,16 +1,20 @@
 package jp.ventii.webfluxdemo.controllers
 
 import jp.ventii.webfluxdemo.models.Item
-import jp.ventii.webfluxdemo.repositories.ItemRepository
 import jp.ventii.webfluxdemo.services.ItemService
+import jp.ventii.webfluxdemo.services.WebClientService
 import org.springframework.web.bind.annotation.*
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
-import reactor.core.scheduler.Schedulers
+
 
 @RestController
 @RequestMapping("/api/items")
-class ItemController(private val itemService: ItemService) {
+class WebClientController(
+    private val webClientService: WebClientService,
+    private val itemService: ItemService
+) {
+
     @GetMapping
     fun getAllItems(): Flux<Item> = itemService.getAllItems()
 
