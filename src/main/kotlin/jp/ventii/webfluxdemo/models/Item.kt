@@ -12,4 +12,8 @@ data class Item(
     val description: String,
     val price: Double,
     val quantity: Int
-)
+) {
+    fun isValid(): Boolean {
+        return name.isNotBlank() && description.isNotBlank()
+    }
+}
