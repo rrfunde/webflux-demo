@@ -49,7 +49,7 @@ class ItemHandler(
     fun deleteItem(request: ServerRequest): Mono<ServerResponse> {
         val id = request.pathVariable("id").toLong()
         return itemService.deleteItem(id)
-            .flatMap { ServerResponse.noContent().build() }
+            .then(Mono.defer { ServerResponse.noContent().build() })
             .switchIfEmpty(ServerResponse.notFound().build())
     }
 }
