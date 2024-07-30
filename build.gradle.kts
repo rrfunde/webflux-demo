@@ -24,6 +24,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("org.springframework.boot:spring-boot-starter-graphql")
 
     runtimeOnly("org.postgresql:r2dbc-postgresql:1.0.4.RELEASE")
     compileOnly("org.projectlombok:lombok")
@@ -32,6 +33,7 @@ dependencies {
     implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.5.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test:3.6.8")
+    testImplementation("org.springframework.graphql:spring-graphql-test")
 }
 
 tasks.withType<Test> {
