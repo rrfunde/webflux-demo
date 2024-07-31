@@ -25,6 +25,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.springframework.boot:spring-boot-starter-graphql")
+    implementation("com.google.firebase:firebase-admin:9.3.0")
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 
     runtimeOnly("org.postgresql:r2dbc-postgresql:1.0.4.RELEASE")
     compileOnly("org.projectlombok:lombok")

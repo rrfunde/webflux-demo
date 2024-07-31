@@ -7,6 +7,7 @@ type Item {
 type Query {
     getAllItems: [Item]
     getItemById(id: ID!): Item
+    hello: String
 }
 
 type Mutation {

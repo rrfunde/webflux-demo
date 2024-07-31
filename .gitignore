@@ -41,3 +41,5 @@ out/
 gradle/wrapper/gradle-wrapper.jar
 gradlew
 gradlew.bat
+src/main/resources/firebase-key.json
+src/main/resources/firebase-key.json
